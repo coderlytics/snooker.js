@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Starting Position</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" integrity="sha512-Gk+uNk8NWN235mIkS6B7/424TsDuPDaoAsUekJCKTWLKP6wlaPv+PBGfO7dbvZeibVPGW+mYidz0vL0XaWwz4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../../src/snooker.js"></script>
+        <script>
+            window.onload = function () {
+                var t = Snookertable("#svg");
+                t.AddBall(YELLOW_BALL, DEFAULT_YELLOW_POSITION);
+            }
+        </script>
+    </head>
+    <body>
+        <svg id="svg"></svg>
+    </body>
+</html>
