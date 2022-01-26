@@ -1,0 +1,121 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg>
+<svg version="1.1" baseProfile="full" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" zoomAndPan="magnify"
+   id="Snooker Table"
+   viewBox="-994 -105 1988 3779"
+   height="1440"
+   width="758">
+
+<desc xml:lang="en">
+The diameter of a ball is officially 52.5mm.
+
+;Balls:
+ d = 52.5mm
+ r = d/2 = 26.25mm
+
+;Table:
+ 3569mm x 1778mm
+
+;Baulk to Baulk-line:
+ 737mm (to top= 3569mm-737mm=2832mm)
+
+;Baulk D:
+ radius
+ 292mm
+ placement
+  737 (from bottom)
+  1778mm/2 = 889mm (from side)
+
+;Balls placement:
+ yellow (right side of D)
+  889mm + 292mm
+  2832mm
+ green (left side of D)
+  889mm - 292mm
+  2832mm
+ brown (in the middle of D)
+  889mm
+  2832mm
+ blue (in the middle of the table)
+  3569mm/2 = 1784.5mm
+ pink (in the middle between the blue spot and the top)
+  3569mm/4 = 892.25mm
+ black (near the top)
+  324mm
+ Reds are placed "as close to the Pink as possible without touching it"
+  As pink is placed on 892.25 so top reds should be on 839.75
+  Moved them to 837 so they won't "touch" each other.
+ White is pretty randomly in the D
+</desc>
+
+<defs>
+<radialGradient id="shine" cx=".3" cy=".3" r=".3" fx=".3" fy=".3">
+	<stop offset="0" stop-color="white" stop-opacity=".5"/>
+	<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="shadow" cy=".0" cx=".3" r="1" >
+	<stop offset="0" stop-color="gray" stop-opacity="0"/>
+	<stop offset=".5" stop-color="black" stop-opacity=".1"/>
+	<stop offset=".8" stop-color="black" stop-opacity=".6"/>
+	<stop offset="1" stop-color="black" stop-opacity="1"/>
+</radialGradient>
+<g id="ball">
+	<circle r="26.25"/>
+	<circle r="26.25" fill="url(#shadow)"/>
+	<circle r="26.25" fill="url(#shine)"/>
+</g>
+<g id="reds">
+	<g id="4reds">
+		<use xlink:href="#ball" fill="red" id="red"/>
+		<use xlink:href="#red" transform="rotate(-30) translate(0,-52.5) rotate(30)"/>
+		<use xlink:href="#red" transform="rotate(30) translate(0,-52.5) rotate(-60) translate(0,-52.5) rotate(30)"/>
+		<use xlink:href="#red" transform="rotate(30) translate(0,-52.5) rotate(-30)"/>
+	</g>
+	<use xlink:href="#4reds" transform="rotate(-30) translate(0,-105) rotate(30)"/>
+	<use xlink:href="#4reds" transform="rotate(30) translate(0,-105) rotate(-30)"/>
+	<use xlink:href="#red" transform="rotate(-30) translate(0,-210) rotate(30)"/>
+	<use xlink:href="#red" transform="rotate(30) translate(0,-105) rotate(-60) translate(0,-105) rotate(30)"/>
+	<use xlink:href="#red" transform="rotate(30) translate(0,-210) rotate(-30)"/>
+</g>
+</defs>
+
+<g stroke="none" stroke-width=".2">
+	<!-- table and cushions -->
+	<rect x="-994" y="-105" rx="105" ry="105" height="3779" width="1988" fill="#4A2106"/>  
+	<rect x="-936.25" y="-47.25" height="3663.5" width="1872.5" fill="darkgreen"/>  
+	<rect x="-889" y="0" height="3569" width="1778" fill="forestgreen"/>  
+
+	<!-- D and baulk-line -->
+	<path d="M -889,2832 h 1778 M -292,2832 a 292,292,0 0,0 584,0" stroke="white" fill="none"/>
+
+	<!-- corner pockets -->
+	<g id="corner">
+		<polygon points="-889,78.75 -810.25,0 -889,-52.5 -941.5,0" fill="forestgreen"/>
+		<polygon points="-889,0 -889,-105 -941.5,-105 -941.5,-52.5 -994,-52.5 -994,-105  -994,0" fill="gold"/>
+		<rect y="-105" x="-994" ry="47.25" rx="47.25" width="105" height="105" fill="gold"/>
+		<circle cy="-18.375" cx="-907.4" r="40.69" fill="black"/>
+	</g>
+	<use xlink:href="#corner" transform="rotate(180) translate(0,-3569)"/>
+	<use xlink:href="#corner" transform="rotate(-90) translate(-2680,-889)"/>
+	<use xlink:href="#corner" transform="rotate(-270) translate(889,-889)"/>
+
+	<!-- side pockets -->
+	<polygon points="-994,1735 -994,1834.4 -894.25,1834.4 -894.25,1735" fill="gold"/>
+	<polygon points="-862.75,1679.5 -862.75,1889.5 -936.25,1823.87 -936.25,1745" fill="forestgreen"/>
+	<circle cy="1784.5" cx="-933.63" r="40.69" fill="black"/>
+
+	<polygon points="994,1735 994,1834.4 894.25,1834.4 894.25,1735" fill="gold"/>
+	<polygon points="862.75,1679.5 862.75,1889.5 936.25,1823.87 936.25,1745" fill="forestgreen"/>
+	<circle cy="1784.5" cx= "933.63" r="40.69" fill="black"/>
+
+	<!-- balls -->
+	<use xlink:href="#reds" y="837"/>
+	<use xlink:href="#ball" y="324" fill="black"/>
+	<use xlink:href="#ball" y="892.25" fill="hotpink"/>
+	<use xlink:href="#ball" y="1784.5" fill="blue"/>
+	<use xlink:href="#ball" y="2832" x="292" fill="yellow"/>
+	<use xlink:href="#ball" y="2832" fill="chocolate"/>
+	<use xlink:href="#ball" y="2832" x="-292" fill="green"/>
+	<use xlink:href="#ball" y="3010" x="130" fill="white"/>
+</g>
+</svg>
